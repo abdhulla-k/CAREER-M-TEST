@@ -14,7 +14,7 @@
                         </div>
                         <span class="review-no"><b>Employment type: </b> {{ jobDetails.data.employment_type }}</span>
                     </div>
-                    <!-- <p class="product-description">{{ jobDetails.data.description }}</p> -->
+                    <p class="product-description">{{ jobDetails.data.description | stringShortner }}</p>
                     <p class="product-description"><b>Industry: </b> {{ jobDetails.data.industry }}</p>
                     <p class="product-description"><b>Location: </b> {{ jobDetails.data.location }}</p>
                     <div class="action">

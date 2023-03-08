@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
 import { HomeComponent } from './home/home.component';
+import { StringShorterPipe } from './shared/pipes/string-shorter.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     BannerComponent,
     JobDetailsComponent,
-    HomeComponent
+    HomeComponent,
+    StringShorterPipe
   ],
   imports: [
     BrowserModule,
