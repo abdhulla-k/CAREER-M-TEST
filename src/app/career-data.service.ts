@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { CareerModel } from './shared/models/career-model';
 import { Banner } from './shared/models/banner';
+import { JobDetails } from './shared/models/job-details';
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +23,13 @@ export class CareerDataService {
   // function to fetch banner
   getBanner() {
     return this.http.get<Banner>(`${this.baseUrl}cms/banner/get?slug=career-list`)
+  }
+
+  // fucntion to fetch job details
+  getDetails(id: number) {
+    return this.http.post<JobDetails>(
+      `${this.baseUrl}career/detail`,
+      { id: id }
+    )
   }
 }

@@ -1,1 +1,26 @@
-<p>job-details works!</p>
+<div class="container">
+    <div class="card">
+        <div class="container-fliud">
+            <div class="wrapper row">
+                <div class="details col-md-6">
+                    <h3 class="product-title">{{ jobDetails.data.title }}</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <span class="review-no"><b>Employment type: </b> {{ jobDetails.data.employment_type }}</span>
+                    </div>
+                    <!-- <p class="product-description">{{ jobDetails.data.description }}</p> -->
+                    <p class="product-description"><b>Industry: </b> {{ jobDetails.data.industry }}</p>
+                    <p class="product-description"><b>Location: </b> {{ jobDetails.data.location }}</p>
+                    <div class="action">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

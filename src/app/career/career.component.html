@@ -23,7 +23,7 @@
                     <span class="heading"><b>Location</b></span>  :  
                     {{ career?.location }}
                   </p>
-                  <a href="#" class="btn btn-dark">Details</a>
+                  <a [routerLink]="['/details', career.id]" class="btn btn-dark">Details</a>
                 </div>
               </div>
         </div>
