@@ -1,0 +1,31 @@
+<div class="container" style="min-height: 80vh;">
+    <h1 
+        style="
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
+            color: gray;">
+            <u>
+                <b>
+                    Jobs
+                </b>
+            </u>
+    </h1>
+    <div class="container job-container" style="width: 100%;">
+        <div 
+            *ngFor="let career of careerData?.careers"
+            style="margin-bottom: 15px;"
+            class="col-md-3 career-card">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{ career?.title }}</h5>
+                  <p class="card-text">{{ career?.category_name }}</p>
+                  <p class="card-text">
+                    <span class="heading"><b>Location</b></span>  :  
+                    {{ career?.location }}
+                  </p>
+                  <a href="#" class="btn btn-dark">Details</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

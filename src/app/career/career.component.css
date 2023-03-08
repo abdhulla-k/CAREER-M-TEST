@@ -1,0 +1,26 @@
+.heading {
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.job-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .job-container {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .job-container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .career-card {
+        margin: 0px 20px 0px 20px;
+    }
+}
