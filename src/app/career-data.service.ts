@@ -32,4 +32,9 @@ export class CareerDataService {
       { id: id }
     )
   }
+
+  // function to apply for a job
+  apply(formData: FormData) {
+    return this.http.post(`${this.baseUrl}career/apply`, formData)
+  }
 }

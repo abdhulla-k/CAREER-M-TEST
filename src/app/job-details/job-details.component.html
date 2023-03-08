@@ -18,7 +18,128 @@
                     <p class="product-description"><b>Industry: </b> {{ jobDetails.data.industry }}</p>
                     <p class="product-description"><b>Location: </b> {{ jobDetails.data.location }}</p>
                     <div class="action">
+                        <button
+                            [disabled]="applied"
+                            (click)="applie()"
+                            class="btn btn-dark">
+                            Apply
+                        </button>
                     </div>
+                    <br>
+
+                    <!-- course creation form -->
+                    <form 
+                        *ngIf="applied"
+                        [formGroup]="applicationForm" 
+                        (ngSubmit)="onSubmit()"
+                    >
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputEmail4">First Name</label>
+                            <input 
+                                formControlName="first_name" 
+                                type="text" 
+                                class="form-control" 
+                                placeholder="your name"
+                            >
+                        </div>
+                    
+                        <div class="col">
+                            <label for="inputEmail4">Second Name</label>
+                            <input 
+                                formControlName="last_name" 
+                                type="text" 
+                                class="form-control" 
+                                placeholder="your secon Name"
+                            >
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputEmail4">Email</label>
+                            <input 
+                                formControlName="email" 
+                                type="text" 
+                                class="form-control" 
+                                placeholder="example@gmail.come"
+                            >
+                        </div>
+                        <div class="col">
+                            <label for="inputEmail4">Phone</label>
+                            <input 
+                                formControlName="phone" 
+                                type="text" 
+                                class="form-control" 
+                                placeholder=""
+                            >
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputEmail4">location</label>
+                            <input 
+                                formControlName="location" 
+                                type="text" 
+                                class="form-control" 
+                                placeholder="India"
+                            >
+                        </div>
+                        <div class="col">
+                            <label for="inputEmail4">linkedin</label>
+                            <input 
+                                formControlName="linkedin" 
+                                type="text" 
+                                class="form-control" 
+                                placeholder="https://linkedin.com"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <label for="inputEmail4">Website</label>
+                        <input 
+                            formControlName="website" 
+                            type="text" 
+                            class="form-control" 
+                            placeholder="https://example.com"
+                        >
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputEmail4">Resume</label>
+                            <input 
+                                (change)="saveFile('resume',$event)"
+                                formControlName="resume"
+                                type="file" 
+                                accept="application/pdf" 
+                                class="form-control"
+                            >
+                        </div>
+                        <div class="col">
+                            <label for="inputEmail4">Cover</label>
+                            <input 
+                                (change)="saveFile('cover_letter',$event)"
+                                formControlName="coverletter"
+                                type="file" 
+                                accept="application/pdf" 
+                                class="form-control"
+                            >
+                        </div>
+                    </div>
+
+                    
+                    <br>
+                    <button 
+                        [disabled]="" 
+                        type="submit" 
+                        class="btn btn-dark">
+                            Submit
+                    </button>
+                </form>
+                <!-- /course creation form -->
                 </div>
             </div>
         </div>
