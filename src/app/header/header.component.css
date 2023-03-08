@@ -1,0 +1,29 @@
+.contain {
+    padding: 5px 250px 5px 250px;
+    background-color: rgb(222, 222, 235);
+}
+
+#auth-btn {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#auth-btn:hover {
+    text-decoration: none;
+}
+
+
+@media screen and ( min-width: 0px ) and ( max-width: 992px ) {
+    .contain {
+        padding: 2px 20px 2px 20px;
+        background-color: rgb(222, 222, 235);
+    }
+}
+
+@media screen and ( min-width: 600px ) and ( max-width: 992px ) {
+    .contain {
+        padding: 2px 150px 2px 150px;
+        background-color: rgb(222, 222, 235);
+    }
+}
