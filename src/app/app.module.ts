@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { CareerComponent } from './career/career.component';
 import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
+import { JobDetailsComponent } from './job-details/job-details.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CareerComponent,
     HeaderComponent,
-    BannerComponent
+    BannerComponent,
+    JobDetailsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
